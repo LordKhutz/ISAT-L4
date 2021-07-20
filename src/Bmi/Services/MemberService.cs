@@ -1,10 +1,10 @@
-﻿using System;
-using Data;
-using Data.Models;
-
-namespace Bmi.Services
+﻿namespace Bmi.Services
 {
-    public class MemberService : Repository<Members>
+    using System;
+    using Data;
+    using Data.Models;
+
+    public class MemberService : Repository<Member>
     {
         public MemberService(BmiContext context)
             : base(context)
