@@ -1,7 +1,10 @@
-﻿using System;
-namespace Bmi.Services
+﻿namespace Bmi.Services
 {
-    public abstract class BmiService
+    using System;
+
+    using Bmi.Abstractions;
+
+    public abstract class BmiService : IBmiService
     {
         public double GetActualBmi(double height, double weight) => Math.Pow(weight / (height / 100), 2);
 

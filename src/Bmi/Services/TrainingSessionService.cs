@@ -1,9 +1,10 @@
-﻿using Data;
-using Data.Models;
-
-namespace Bmi.Services
+﻿namespace Bmi.Services
 {
-    public class TrainingSessionService : Repository<TrainingSession>, IRepository<TrainingSession>
+    using Bmi.Abstractions;
+    using Data;
+    using Data.Models;
+
+    public class TrainingSessionService : Repository<TrainingSession>, ITrainingSessionService
     {
         public TrainingSessionService(BmiContext context)
             : base(context)

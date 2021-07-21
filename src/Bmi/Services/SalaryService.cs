@@ -1,9 +1,10 @@
-﻿using Data;
-using Data.Models;
-
-namespace Bmi.Services
+﻿namespace Bmi.Services
 {
-    public class SalaryService : Repository<TrainerSalary>, IRepository<TrainerSalary>
+    using Bmi.Abstractions;
+    using Data;
+    using Data.Models;
+
+    public class SalaryService : Repository<TrainerSalary>, ISalaryService
     {
         public SalaryService(BmiContext context)
             : base(context)
