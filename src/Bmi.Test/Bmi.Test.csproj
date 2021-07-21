@@ -12,13 +12,16 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="Moq" Version="4.16.1" />
     <PackageReference Include="Moq.EntityFrameworkCore" Version="5.0.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.8" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Bmi\Bmi.csproj" />
+    <ProjectReference Include="..\Data\Data.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Moq" />
     <None Remove="Moq.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.InMemory" />
   </ItemGroup>
 </Project>

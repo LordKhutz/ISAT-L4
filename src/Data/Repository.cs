@@ -45,7 +45,7 @@
         {
             if (entity is null)
             {
-                throw new InvalidOperationException();
+                throw new EmptyEntityException();
             }
         }
     }
