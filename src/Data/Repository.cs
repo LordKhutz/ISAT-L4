@@ -3,7 +3,7 @@
     using System;
     using System.Threading.Tasks;
 
-    public class Repository<TEntity> where TEntity: class, new()
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, new()
     {
         private readonly BmiContext context;
 
@@ -22,7 +22,7 @@
             NullCheck(entity);
 
             await this.AddAsync(entity);
-            await this.context .SaveChangesAsync();
+            await this.context.SaveChangesAsync();
 
             return entity;
         }

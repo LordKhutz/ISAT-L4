@@ -1,8 +1,8 @@
-﻿using Data.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace Data
+﻿namespace Data
 {
+    using Data.Models;
+    using Microsoft.EntityFrameworkCore;
+
     public class BmiContext : DbContext
     {
         public BmiContext(DbContextOptions<BmiContext> options)
