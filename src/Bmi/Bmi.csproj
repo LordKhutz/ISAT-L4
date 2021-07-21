@@ -3,11 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
-    <None Remove="Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\Data\Data.csproj" />
   </ItemGroup>
 </Project>

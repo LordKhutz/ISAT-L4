@@ -1,6 +1,7 @@
 ﻿namespace Data.Models
 {
     using System;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public enum Gender
     {
@@ -16,11 +17,13 @@
         Premium
     }
 
-    public class Member
+    public class Member: User
     {
         public long Trainer { get; set; }
 
         public int Age { get; set; }
+
+        public double Height { get; set; }
 
         public DateTime JoinDate { get; set; }
 

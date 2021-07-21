@@ -1,10 +1,9 @@
-﻿using System;
-using Data;
+﻿using Data;
 using Data.Models;
 
 namespace Bmi.Services
 {
-    public class TrainerService : Repository<Trainers>
+    public class TrainerService : Repository<Trainer>, IRepository<Trainer>
     {
         public TrainerService(BmiContext context)
             : base(context)
