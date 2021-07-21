@@ -21,7 +21,7 @@
         {
             NullCheck(entity);
 
-            await this.AddAsync(entity);
+            await this.context.AddAsync(entity);
             await this.context.SaveChangesAsync();
 
             return entity;

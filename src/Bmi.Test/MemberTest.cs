@@ -26,13 +26,11 @@
         public void Setup()
         {
             var options = new DbContextOptionsBuilder<BmiContext>()
-                .UseInMemoryDatabase(databaseName: "Products Test")
+                .UseInMemoryDatabase(databaseName: "MemberTest")
                 .Options;
 
-            using (var context = new BmiContext(options))
-            {
-                memberService = new MemberService(context);
-            }
+            var context = new BmiContext(options);
+            memberService = new MemberService(context);
         }
 
         [Test]
@@ -62,7 +60,7 @@
             await this.memberService.AddAsync(member);
             var newMember = await this.memberService.FindByIdAsync(member.Id);
 
-            Assert.Equals(newMember, member);
+            Assert.AreEqual(member, newMember);
         }
     }
 }
