@@ -43,26 +43,26 @@
             Assert.ThrowsAsync<EmptyEntityException>(async () => await this.memberService.AddAsync(member));
         }
 
-        //[Test]
-        //public async Task Add()
-        //{
-        //    var member = new Member
-        //    {
-        //        Id = 1,
-        //        FirstName = "Khuthadzo",
-        //        LastName = "Tshikotshi",
-        //        ContactNumber = 747701521,
-        //        Age = 25,
-        //        Trainer = 0,
-        //        Gender = Gender.Male,
-        //        JoinDate = DateTime.Today,
-        //        Height = 177
-        //    };
+        [Test]
+        public async Task Add()
+        {
+            var member = new Member
+            {
+                Id = 1,
+                FirstName = "Khuthadzo",
+                LastName = "Tshikotshi",
+                ContactNumber = 747701521,
+                Age = 25,
+                Trainer = 0,
+                Gender = Gender.Male,
+                JoinDate = DateTime.Today,
+                Height = 177
+            };
 
-        //    await this.memberService.AddAsync(member);
-        //    var newMember = await this.memberService.FindByIdAsync(member.Id);
+            await this.memberService.AddAsync(member);
+            var newMember = await this.memberService.FindByIdAsync(member.Id);
 
-        //    Assert.Equals(newMember, member);
-        //}
+            Assert.Equals(newMember, member);
+        }
     }
 }
