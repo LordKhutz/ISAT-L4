@@ -1,5 +1,6 @@
 ﻿namespace Bmi.Services
 {
+    using System.Linq;
     using Bmi.Abstractions;
 
     using Data;
